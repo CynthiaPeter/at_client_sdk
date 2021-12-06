@@ -8,25 +8,36 @@
 
 ### Introduction
 
-SDK that provides the essential methods for building an app using [The @protocol](https://atsign.com). You may also want to look at [at_client_mobile](https://pub.dev/packages/at_client_mobile).
+An SDK that gives you access to the @ Platform. 
+
+at_client provides the essential methods for building an app using [The @protocol](https://atsign.com). You may also want to look at [at_client_mobile](https://pub.dev/packages/at_client_mobile).
 
 **at_client** package is written in Dart, supports Flutter and follows the
-@platform's decentralized, edge computing model with the following features: 
-- Cryptographic control of data access through personal data stores
-- No application backend needed
-- End to end encryption where only the data owner has the keys
-- Private and surveillance free connectivity
+@platform's secured, decentralized, edge computing model with the following features: 
+- Cryptographic control of data access through personal data stores.
+- No application backend needed.
+- End-to-end encryption where only the data owner has the keys.
+- Private and surveillance free connectivity.
 - ... <!--- add package features here -->
 
-We call giving people control of access to their data "*flipping the internet*".
 
-## Get Started
 
-Initially to get a basic overview of the SDK, you must read the [atsign docs](https://atsign.dev/docs/overview/).
+## Getting Started
+
+**at_client** would be used by Dart developers for developing solutions for sample cases like IoT. 
+
+If you are a Flutter developer, you should use [at_app_flutter](https://github.com/atsign-foundation/at_app) or [at_client_mobile](https://github.com/atsign-foundation/at_client_sdk/tree/trunk/at_client_mobile) which includes some essential components for building mobile solutions based on the Flutter SDK.
+
+Important: at_client depends on dart, whereas at_client_mobile depends on the Flutter SDK.
+
+
+
+To get a basic overview of the SDK, it is important that you visit [atsign docs](https://atsign.dev/docs/overview/).
 
 > To use this package you must be having a basic setup, Follow here to [get started](https://atsign.dev/docs/get-started/setup-your-env/).
 
-Check how to use this package in the [at_client installtion tab](https://pub.dev/packages/at_client/install).
+Check how to use this package in the [at_client installation tab](https://pub.dev/packages/at_client/install).
+
 
 ## Usage
 
@@ -53,7 +64,12 @@ Check how to use this package in the [at_client installtion tab](https://pub.dev
 
     - [`put()`]()
 
-        - Updates value of [AtKey.key](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/key.html) is if it is already present. Otherwise creates a new key. Set [AtKey.sharedWith](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/sharedWith.html) if the key has to be shared with another atSign. Set [AtKey.metadata.isBinary](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/isBinary.html) if you are updating binary value e.g image,file. By default namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. phone@alice will be saved as phone.persona@alice where 'persona' is the namespace. If you want to save by ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false. Additional metadata can be set using [AtKey.metadata](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata-class.html).
+       - If the [AtKey Object](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/key.html) does not already exist, put() will create a new object and store it on the creator's secondary server. If the object exists, put() will update the value of the corresponding object.
+        - [AtKey.sharedWith](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/sharedWith.html) allows for setting a receiver atSign. This will set the object on both the sender's and receiver's secondary servers.
+        -  [AtKey.metadata.isBinary](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/isBinary.html) allows for declaring if the object contains a binary value, e.g an image file. 
+        -  By default, the namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. For example, phone@alice will be saved as phone.persona@alice where 'persona' is the namespace.
+        -  If you want to store the object while ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false. 
+        -  Additional metadata can be set using [AtKey.metadata](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata-class.html).
 
     - [`get()`]()
 
@@ -118,3 +134,12 @@ Check how to use this package in the [at_client installtion tab](https://pub.dev
 **AtNotification**
 
   - A model class that represents the notification received from the atSign.
+---
+
+  > We call giving people control of access to their data "*flipping the internet*".
+
+---
+
+ ## Contributing to this Package
+ 
+  If you will like to contribute to the package, check our [contribution guide.](https://github.com/atsign-foundation/at_widgets/blob/trunk/CONTRIBUTING.md)
