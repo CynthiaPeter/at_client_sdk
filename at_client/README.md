@@ -32,9 +32,9 @@ Important: at_client depends on dart, whereas at_client_mobile depends on the Fl
 
 
 
-To get a basic overview of the SDK, it is important that you visit [atsign docs](https://atsign.dev/docs/overview/).
+To get a basic overview of the SDK, please visit [atsign docs](https://atsign.dev/docs/functional_architecture/).
 
-> To use this package you must be having a basic setup, Follow here to [get started](https://atsign.dev/docs/get-started/setup-your-env/).
+> To use this package you must have a basic setup, Follow here to [get started](https://atsign.dev/docs/get-started/setup-your-env/).
 
 Check how to use this package in the [at_client installation tab](https://pub.dev/packages/at_client/install).
 
@@ -73,7 +73,7 @@ Check how to use this package in the [at_client installation tab](https://pub.de
 
     - [`get()`]()
 
-        - Updates the metadata of [AtKey.key](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/key.html) if it is already present. Otherwise creates a new key without a value. By default namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. phone@alice will be saved as phone.persona@alice where 'persona' is the namespace. If you want to save by ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false.
+        - Updates the metadata of [AtKey](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey-class.html) if it is already present. Otherwise creates a new key without a value. By default namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. phone@alice will be saved as phone.persona@alice where 'persona' is the namespace. If you want to save by ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false.
 
     - [`putMeta()`]()
 
