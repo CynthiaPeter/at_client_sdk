@@ -55,11 +55,11 @@ Check how to use this package in the [at_client installtion tab](https://pub.dev
 
         - Updates value of [AtKey.key](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/key.html) is if it is already present. Otherwise creates a new key. Set [AtKey.sharedWith](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/sharedWith.html) if the key has to be shared with another atSign. Set [AtKey.metadata.isBinary](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/isBinary.html) if you are updating binary value e.g image,file. By default namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. phone@alice will be saved as phone.persona@alice where 'persona' is the namespace. If you want to save by ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false. Additional metadata can be set using [AtKey.metadata](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata-class.html).
 
-    - [`get()`]()
+    - [`putMeta()`]()
 
         - Updates the metadata of [AtKey.key](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/key.html) if it is already present. Otherwise creates a new key without a value. By default namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. phone@alice will be saved as phone.persona@alice where 'persona' is the namespace. If you want to save by ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false.
 
-    - [`putMeta()`]()
+    - [`get()`]()
 
         - Get the value of [AtKey.key](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/key.html) from user's cloud secondary if [AtKey.sharedBy](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/sharedBy.html) is set. Otherwise looks up the key from local secondary. If the key was stored with public access, set [AtKey.metadata.isPublic](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/isPublic.html) to true. If the key was shared with another atSign set [AtKey.sharedWith](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/sharedBy.html).
 
