@@ -26,7 +26,7 @@ Initially to get a basic overview of the SDK, you must read the [atsign docs](ht
 
 > To use this package you must be having a basic setup, Follow here to [get started](https://atsign.dev/docs/get-started/setup-your-env/).
 
-Check how to use this package in the [at_client installtion tab](https://pub.dev/packages/at_client/install).
+Check how to use this package in the [at_client installation tab](https://pub.dev/packages/at_client/install).
 
 ## Usage
 
@@ -53,7 +53,7 @@ Check how to use this package in the [at_client installtion tab](https://pub.dev
 
     - [`put()`]()
 
-        - Updates value of [AtKey.key](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/key.html) is if it is already present. Otherwise creates a new key. Set [AtKey.sharedWith](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/sharedWith.html) if the key has to be shared with another atSign. Set [AtKey.metadata.isBinary](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/isBinary.html) if you are updating binary value e.g image,file. By default namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. phone@alice will be saved as phone.persona@alice where 'persona' is the namespace. If you want to save by ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false. Additional metadata can be set using [AtKey.metadata](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata-class.html).
+        - Updates value of [AtKey](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey-class.html) is if it is already present. Otherwise creates a new key. Set [AtKey.sharedWith](https://pub.dev/documentation/at_commons/latest/at_commons/AtKey/sharedWith.html) if the key has to be shared with another atSign. Set [AtKey.metadata.isBinary](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/isBinary.html) if you are updating binary value e.g image,file. By default namespace that is used to create the [AtClient](https://pub.dev/documentation/at_client/latest/at_client/AtClient-class.html) instance will be appended to the key. phone@alice will be saved as phone.persona@alice where 'persona' is the namespace. If you want to save by ignoring the namespace set [AtKey.metadata.namespaceAware](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata/namespaceAware.html) to false. Additional metadata can be set using [AtKey.metadata](https://pub.dev/documentation/at_commons/latest/at_commons/Metadata-class.html).
 
     - [`putMeta()`]()
 
