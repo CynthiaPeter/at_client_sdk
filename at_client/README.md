@@ -10,7 +10,9 @@
 
 An SDK that gives you access to the @ Platform. 
 
-at_client provides the essential methods for building an app using [The @protocol](https://atsign.com). You may also want to look at [at_client_mobile](https://pub.dev/packages/at_client_mobile).
+at_client provides the essential methods for building a pure Dart app using [The @protocol](https://atsign.com). 
+
+If you are a Flutter developer, you should use [at_app_flutter](https://github.com/atsign-foundation/at_app) or [at_client_mobile](https://github.com/atsign-foundation/at_client_sdk/tree/trunk/at_client_mobile) which includes some essential components for building mobile solutions based on the Flutter SDK.
 
 **at_client** package is written in Dart, supports Flutter and follows the
 @platform's secured, decentralized, edge computing model with the following features: 
@@ -28,7 +30,7 @@ at_client provides the essential methods for building an app using [The @protoco
 
 If you are a Flutter developer, you should use [at_app_flutter](https://github.com/atsign-foundation/at_app) or [at_client_mobile](https://github.com/atsign-foundation/at_client_sdk/tree/trunk/at_client_mobile) which includes some essential components for building mobile solutions based on the Flutter SDK.
 
-Important: at_client depends on dart, whereas at_client_mobile depends on the Flutter SDK.
+Important: at_client depends only on dart, whereas at_client_mobile also depends on the Flutter SDK.
 
 
 
